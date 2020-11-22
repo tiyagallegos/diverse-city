@@ -1,23 +1,23 @@
-import React from 'react'   
-// import styles from './Footer.module.scss'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faGithub, faLinkedin, faLine } from '@fortawesome/free-brands-svg-icons'
-import { Link } from 'react-router-dom'
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons"
+
+import styles from './Footer.module.scss'
 
 export default function Footer() {
-    return (
-        <footer className={""}>
+    return(
+        <footer className={styles.Footer}>
+            <section> Copyright &copy; {new Date().getFullYear()} </section>
             <section>
-                Copyright &copy; {new Date().getFullYear()}            
+                <a href="https://github.com/hnorthcote/"> 
+                    <FontAwesomeIcon icon={faGithub} />
+                </a>
+               
+                <a href="https://www.linkedin.com/in/henry-northcote/">
+                    <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+               
             </section>
-            {/* <section>
-            <Link href="https://github.com">
-                <FontAwesomeIcon icon={faGithub} /></Link>
-                <Link href="htpps://Linkedin.com">
-                <FontAwesomeIcon icon={faLinkedin} /></Link>
-                <Link href="htpps://Linkedin.com">
-                <FontAwesomeIcon icon={faLinkedin} /></Link> 
-            </section>*/}
         </footer>
-    )
+    );
 }
