@@ -1,4 +1,4 @@
-h2 {
+.layout {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
