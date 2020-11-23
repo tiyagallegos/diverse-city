@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 const WelcomePage = (props) => {
     return (
         <div className='layout'>
+            <Link to='/signup'><button>Signup</button></Link>
             <div className='intro'>
                 <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                     Labore laboriosam iure dicta id ipsa, ipsum, in beatae, excepturi quidem perferendis 
