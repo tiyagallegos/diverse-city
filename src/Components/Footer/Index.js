@@ -15,7 +15,7 @@ export default function Footer() {
                 <a href="https://github.com/hnorthcote/" target="_blank"> 
                     <FontAwesomeIcon icon={faGithub} />
                 </a>
-                <a href="https://www.linkedin.com/in/tiyagallegos/" target="_blank">
+                <a href="https://www.linkedin.com/in/tiya-gallegos/" target="_blank">
                     <FontAwesomeIcon icon={faLinkedin} />
                 </a>
                 <a href="https://www.linkedin.com/in/henry-northcote/" target="_blank">
