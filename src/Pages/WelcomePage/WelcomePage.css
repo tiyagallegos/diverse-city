@@ -1,10 +1,15 @@
+
+
 .layout {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: whitesmoke;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    padding-left: 24rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  min-height: 100vh;
+  background-image: url("https://3ffb20d6eafb05bffcbf-a7fc0a41f7029defdd3e09482435991b.ssl.cf1.rackcdn.com/properties/photos/8a3a3c33e52bda91aacbd5a216c5584c.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

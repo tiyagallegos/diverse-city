@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     height: 5rem;
-    color: black;
+    color: whitesmoke;
     text-decoration: none;
     background-color: rgb(94, 150, 94)
 }
@@ -22,7 +22,7 @@
       justify-content: center;
       align-items: center;
       height: 5rem;
-      color: black;
+      color: whitesmoke;
       text-decoration: none;
 }
   
@@ -40,25 +40,23 @@
     
     .NavBar-link {
       margin: 30;
-      color: black;
+      color: whitesmoke;
       text-decoration: none;
       
     }
     
     .NavBar-welcome {
-      color: black;
+      color: whitesmoke;
       
     }
     .navPages:hover{
-      color: rgb(95, 14, 118);
-      text-shadow: 1px 1px 1px rgb(114, 86, 15);
-      box-shadow: 6px 5px 24px #6821cb;
+      color: whitesmoke;
+      text-shadow: 1px 1px 1px rgb(191, 185, 168);
     }
   
     .NavBar-link:hover{
-      color: goldenrod;
-      text-shadow: 1px 1px 1px rgb(114, 86, 15);
-      box-shadow: 6px 5px 24px #cb9521;
+      color: whitesmoke;
+      text-shadow: 1px 1px 1px rgb(179, 174, 162);
     }
   
     .title {
@@ -66,18 +64,17 @@
       font-weight: 900;
       font-size: 70px;
       text-align: center;
-      color: black;
+      color: whitesmoke;
     }
   
     .title:hover {
       text-decoration: none;
-      color: goldenrod;
+      color: whitesmoke;
       font-weight: 900;
       font-size: 70px;
       text-align: center;
-      text-shadow: 1px 1px 1px goldenrod;  
-      box-shadow: 6px 5px 24px ##cb9521;
-    }
+      text-shadow: 1px 1px 1px rgb(196, 191, 180);  
+        }
   
    .navPages {
      text-decoration: none;
@@ -95,11 +92,10 @@
   }
   
   .mainPageLinks:hover {
-    color: goldenrod;
+    color: whitesmoke;
     text-decoration: none;
     text-shadow: 1px 1px 1px rgb(52, 50, 47);  
     text-emphasis: bold;
-    box-shadow: 6px 5px 24px #d3ab0c;
     text-transform: uppercase;
   }
   .NavContainer {

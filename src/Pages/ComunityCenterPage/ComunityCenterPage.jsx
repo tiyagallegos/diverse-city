@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './InvestorPage';
+import './CommunityCenter.css';
 import { Link } from 'react-router-dom';
 
 
 function InvestorPage(props) {
     return (
-        <div className={styles}>
+        <div className="ccstyles">
             <h2>Community Center</h2>
             <Link to='/'>Home</Link>
         </div>
