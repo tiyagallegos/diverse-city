@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import Footer from '../../components/Footer/Index.js';
+import Footer from '../../Components/Footer/Index';
 import WelcomePage from '../WelcomePage/WelcomePage';
 import BusinessPage from '../BusinessPage/BusinessPage';
 import UserDetailsPage from '../UserDetailsPage/UserDetailsPage';
 import InvestorPage from '../InverstorPage/InvestorPage';
-import SignupForm from '../../components/SignupForm/SignupForm';
-import NavBar from '../../components/NavBar/NavBar';
+import SignupForm from '../../Components/SignupForm/SignupForm';
+import NavBar from '../../Components/NavBar/NavBar';
 
 class App extends Component {
   constructor() {
