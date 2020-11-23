@@ -1,14 +1,14 @@
 import React from 'react';
-import syles from './WelcomePage.css'
+import './WelcomePage.css';
 import { Link } from 'react-router-dom'
 
 const WelcomePage = (props) => {
     return (
         <div className='layout'>
-            <div className="choose">
-                <Link to='/business'><button>Click here to see our supporting businesses</button></Link>
-                <Link to='/user'><button>Click here to sign in and add your input to the community</button></Link>
-                <Link to='/investor'><button>Click here to become a sponsor</button></Link>
+            <div className="directory-buttons">
+                <Link  to='/business'><button className="choose">Business</button></Link>
+                <Link  to='/user'><button className="choose">Community</button></Link>
+                <Link  to='/investor'><button className="choose">Investor</button></Link>
 
             </div>
         </div>

@@ -8,8 +8,23 @@
   flex-wrap: wrap;
   flex-grow: 1;
   min-height: 100vh;
-  background-image: url("https://3ffb20d6eafb05bffcbf-a7fc0a41f7029defdd3e09482435991b.ssl.cf1.rackcdn.com/properties/photos/8a3a3c33e52bda91aacbd5a216c5584c.jpg");
+  background: url("https://www.langan.com/wp-content/uploads/2017/08/Denver.jpg");
+  opacity: 0.5;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.choose {
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  background-color: teal;
+  padding: 10px;
+  margin: 10px;
+  font-size: 2rem;
 }
