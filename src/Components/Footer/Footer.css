@@ -1,0 +1,19 @@
+.Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(193, 237, 193);
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+.icons {
+    color: black;
+    padding: 2px;
+    margin: auto;
+    font-size: 1.5rem;
+}
