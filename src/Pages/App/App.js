@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import Footer from '../../Components/Footer/Index';
+import Footer from '../../components/Footer/Index.js';
 import WelcomePage from '../WelcomePage/WelcomePage';
 import BusinessPage from '../BusinessPage/BusinessPage';
 import UserDetailsPage from '../UserDetailsPage/UserDetailsPage';
