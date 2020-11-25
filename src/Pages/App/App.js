@@ -6,7 +6,7 @@ import WelcomePage from '../WelcomePage/WelcomePage';
 import BusinessPage from '../BusinessPage/BusinessPage';
 import UserDetailsPage from '../UserDetailsPage/UserDetailsPage';
 import InvestorPage from '../InverstorPage/InvestorPage';
-import SignupForm from '../../Components/SignupForm/SignupForm';
+import SignupPage from '../SignupPage/SignupPage'
 import NavBar from '../../Components/NavBar/NavBar';
 
 class App extends Component {
@@ -38,7 +38,7 @@ class App extends Component {
                 <InvestorPage {...props} />
               }/>
               <Route exact path='/signup' render={props =>    
-                <SignupForm {...props} />
+                <SignupPage {...props} />
               }/>
           </Switch>
         <Footer/>
