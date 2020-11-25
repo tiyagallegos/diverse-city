@@ -6,15 +6,36 @@ import {
 } from "@react-firebase/auth";
 import { State } from "react-powerplug";
 import firebase from "firebase/app";
-import { firebaseConfig } from "../firebase";
+import { firebaseConfig } from "../firebaseConfig";
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  // Initialize a provider for google Oauth
 
-const IDontCareAboutFirebaseAuth = () => {
-  return <div>This part won't react to firebase auth changes</div>;
-};
+  const provider = new firebase.auth.GoogleAuthProvider();
 
-export const firebaseAuth = () => {
-  return (
-    <div>
+  // initialize the auth object to call auth methods on
+  
+  const auth = firebase.auth();
+  
+  // Login / Logout Functions
+  function login() {
+      auth.signInWithPopup(provider);
+  }
+  
+  function logout() {
+      auth.signOut();
+  }
+  
+  // name exports
+  
+  
+  const IDontCareAboutFirebaseAuth = () => {
+    return <div>This part won't react to firebase auth changes</div>;
+  };
+  
+  const firebaseAuth = () => {
+    return (
+      <div>
       <IDontCareAboutFirebaseAuth />
         <FirebaseAuthProvider {...firebaseConfig} firebase={firebase}>
         <State initial={{ isLoading: false, error: null }}>
@@ -27,7 +48,7 @@ export const firebaseAuth = () => {
                   <h2>You're not signed in </h2>
                   <button
                      onClick={async () => {
-                      try {
+                       try {
                         setState({ isLoading: true, error: null });
                         const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
                         await firebase
@@ -38,7 +59,7 @@ export const firebaseAuth = () => {
                         setState({ isLoading: false, error: error });
                       }
                     }}
-                  >
+                    >
                     Sign in with Google
                   </button>
                 </div>
@@ -50,3 +71,4 @@ export const firebaseAuth = () => {
     </div>
   );
 };
+export { auth, login, logout, firebaseAuth }
