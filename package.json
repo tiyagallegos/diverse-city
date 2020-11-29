@@ -15,16 +15,13 @@
     "bcrypt": "^5.0.0",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
-<<<<<<< HEAD
     "ejs": "^2.7.4",
-=======
->>>>>>> cd2e48c92c86177b1d5de6377b6c689b98194407
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "font-awesome-icons": "^1.6.0",
     "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",
-    "mongoose": "^5.10.15",
+    "mongoose": "^5.10.18"
     "morgan": "^1.10.0",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.6",
