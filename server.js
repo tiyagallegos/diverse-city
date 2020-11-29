@@ -1,12 +1,9 @@
 const express = require('express');
 const path = require('path');
-const favicon = require('serve-favicon');
 const logger = require('morgan');
-const admin = require('firebase-admin');
+const favicon = require('serve-favicon');
 const app = express();
 
-
-admin.initializeApp();
 
 require('dotenv').config();
 require('./config/database');
@@ -14,13 +11,12 @@ require('./config/database');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended:false }));
-app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname,'build')));
 
 // API routes
 
 app.use('/api/users', require('./routes/api/users'));
-app.use('/api/stories', require('./routes/api/stories'));
+app.use('/api/stories', require('./routes/api/businesses'));
 
 // The following "catch all" route (note the *)is necessary
 // for a SPA's client-side routing to properly work 

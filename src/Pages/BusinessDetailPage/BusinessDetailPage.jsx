@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './BusinessPage';
+import styles from './BusinessDetailPage';
 
 
 function BusinessPage(props) {
