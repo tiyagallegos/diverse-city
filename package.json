@@ -14,11 +14,16 @@
     "bcrypt": "^5.0.0",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "font-awesome-icons": "^1.6.0",
     "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
     "mongoose": "^5.10.15",
+    "morgan": "^1.10.0",
     "node-sass": "^4.14.1",
+    "nodemon": "^2.0.6",
     "passport": "^0.4.1",
     "passport-google-oauth": "^2.0.0",
     "react": "^17.0.1",
@@ -53,5 +58,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiyagallegos/diverse-city.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiyagallegos/diverse-city/issues"
+  },
+  "homepage": "https://github.com/tiyagallegos/diverse-city#readme"
 }
