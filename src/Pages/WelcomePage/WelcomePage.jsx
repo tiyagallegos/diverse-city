@@ -9,6 +9,8 @@ const WelcomePage = (props) => {
                 <Link  to='/business'><button className="choose">Business</button></Link>
                 <Link  to='/user'><button className="choose">Community</button></Link>
                 <Link  to='/investor'><button className="choose">Investor</button></Link>
+                <Link  to='/Signup'><button className="choose">Signup</button></Link>
+
 
             </div>
         </div>
