@@ -4,8 +4,7 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const admin = require('firebase-admin');
 const app = express();
-const functions = require('firebase-functions');
-const { response } = require('express');
+
 
 admin.initializeApp();
 
