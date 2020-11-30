@@ -1,12 +1,20 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const business = require('./business');
+const Schema = mongoose.Schema;
 
 const SALT_ROUNDS = 6;
 
 const userSchema = new mongoose.Schema({
-  name: String,
+  firstName: {type: String, required: true},
+  lastName: {type: String, required: true},
+  userName: {type: String, required: true, unique: true},
   email: {type: String, required: true, lowercase: true, unique: true},
-  password: String
+  bio: {type: String, required: true},
+  avatar: {type: String, required: false},
+  businessAffiliation: {type: Boolean},
+  bussinessID: {type: Schema.Types.ObjectId, ref: "Business", required:false},
+  password: {type: String, required: false},
 }, {
   timestamps: true
 });
