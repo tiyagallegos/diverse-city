@@ -1,30 +1,38 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import userService from '../../utils/userService';
+import userService from '../../Utils/userService';
 
 class SignupForm extends Component {
 
-  state = {
-    name: '',
-    email: '',
-    password: '',
-    passwordConf: ''
-  };
+    state= {
+        user: userService.getUser(),
+        firstName: '',
+        lastName: '',
+        userName: '',
+        email: '',
+        bio: '',
+        password: '',
+        passwordConf: ''
+    };
 
   handleChange = (e) => {
     this.props.updateMessage('');
     this.setState({
-      // Using ES2015 Computed Property Names
       [e.target.name]: e.target.value
     });
   }
-
+  handleSignupOrLogin = () => {
+    this.setState({ user: userService.getUser() })
+  } 
+  handleLogout = () => {
+    userService.logOut();
+    this.setState({ user : null });
+  }
   handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await userService.signup(this.state);
-      // Successfully signed up - show GamePage
-      this.props.handleSignupOrLogin();
+      this.handleSignupOrLogin();
       this.props.history.push('/');
     } catch (err) {
       // Invalid user data (probably duplicate email)
@@ -33,7 +41,7 @@ class SignupForm extends Component {
   }
 
   isFormInvalid() {
-    return !(this.state.name && this.state.email && this.state.password === this.state.passwordConf);
+    return !(this.state.firstName && this.state.lastName && this.state.userName && this.state.bio && this.state.email && this.state.password === this.state.passwordConf);
   }
 
   render() {
@@ -43,12 +51,24 @@ class SignupForm extends Component {
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="form-group">
             <div className="col-sm-12">
-              <input type="text" className="form-control" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange} />
+              <input type="text" className="form-control" placeholder="firstName" value={this.state.firstName} name="firstName" onChange={this.handleChange} />
+            </div>
+          </div>          <div className="form-group">
+            <div className="col-sm-12">
+              <input type="text" className="form-control" placeholder="lastName" value={this.state.lastName} name="lastName" onChange={this.handleChange} />
+            </div>
+          </div>          <div className="form-group">
+            <div className="col-sm-12">
+              <input type="text" className="form-control" placeholder="userName" value={this.state.userName} name="userName" onChange={this.handleChange} />
             </div>
           </div>
           <div className="form-group">
             <div className="col-sm-12">
               <input type="email" className="form-control" placeholder="Email" value={this.state.email} name="email" onChange={this.handleChange} />
+            </div>
+          </div>          <div className="form-group">
+            <div className="col-sm-12">
+              <input type="textBox" className="form-control" placeholder="Bio" value={this.state.bio} name="bio" onChange={this.handleChange} />
             </div>
           </div>
           <div className="form-group">
