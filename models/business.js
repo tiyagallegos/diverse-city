@@ -18,4 +18,4 @@ const businessSchema = new Schema({
   businessLogos: {type: String, required:false},
 }, { timestamps: true });
 
-module.exports = mongoose.model('story', businessSchema); 
+module.exports = mongoose.model('business', businessSchema); 
