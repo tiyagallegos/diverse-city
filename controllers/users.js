@@ -65,11 +65,8 @@ async function getUserById(req, res) {
 
 async function updateUser(req, res) {
   try {
-    console.log('update controller started')
-    req.body.createdBy=req.user._id
-  console.log("logging data from update fetch request in controller " + req.body._id +" "+ req.body.comment)
   await User.updateOne(  {_id : req.body._id } , req.body )
-  res.status(200).json({message: 'Comment updated successfully'})
+  res.status(200).json({message: 'User updated successfully'})
   } catch (error) {
     console.log(error)
     res.status(400).json({message: 'something went wrong'});
