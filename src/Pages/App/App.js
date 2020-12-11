@@ -16,7 +16,7 @@ class App extends Component {
       user: null,
     }
   };
-  async compoentDidMount() {
+  async componentDidMount() {
 
   };
   render() {
