@@ -40,7 +40,7 @@ function updateEscort(id, data) {
             'Content-type': 'Application/json'
         },
         body: JSON.stringify(data)
-    }).then(response => response.json());
+    }).then(response => response.json()); 
 }
 
 export default { getBussinesses, createBusiness, removeBusiness, updateDoneBusiness, updateEscort }
