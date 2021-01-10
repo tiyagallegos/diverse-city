@@ -1,0 +1,16 @@
+.signupform {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-width: fit-content;
+    min-height: 100vh;
+    border: 5px solid black;
+    background-color: rgb(83, 130, 83);
+    color: whitesmoke;
+    margin: 30px;
+    background-size: cover;
+    color: black;
+    
+}

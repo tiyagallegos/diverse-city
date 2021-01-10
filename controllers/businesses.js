@@ -1,4 +1,4 @@
-const business = require('../models/business');
+const Business = require('../models/business');
 
 
 module.exports = {
@@ -9,9 +9,20 @@ module.exports = {
 };
 
 
+async function index(req, res) {
+try {
+  console.log("index controller started")
+  const business = await Business.find({businessId: req.query.businessId});
+  res.status(201).json(businesses)
+} catch (error) {
+   res.status(400).json({message: 'something went wrong'})
+}}
+
+
 async function create(req, res) {
   try {
-   await business.create(req.body)
+    req.body.createdBy = req.params.id
+   await Business.create(req.body)
  res.status(201).json({message: "business created successfully"})
   } catch (error) {
     console.log(error) 
@@ -32,14 +43,6 @@ async function updatebusiness(req, res) {
   }
 }
   
-async function index(req, res) {
-try {
-  console.log("index controller started")
-  const business = await business.find({businessId: req.query.businessId});
-  res.status(201).json(businesses)
-} catch (error) {
-   res.status(400).json({message: 'something went wrong'})
-}}
 
 async function deletebusiness(req, res) {
    try {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import userService from '../../Utils/userService';
+import './SignupForm.css';
 
 class SignupForm extends Component {
 
