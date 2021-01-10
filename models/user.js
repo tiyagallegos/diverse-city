@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
   bio: {type: String, required: true},
   avatar: {type: String, required: false},
   businessAffiliation: {type: Boolean},
-  bussinessID: {type: Schema.Types.ObjectId, ref: "Business", required:false},
+  bussinessID: {type: Schema.Types.ObjectId, ref: "business", required:false},
   password: {type: String, required: false},
 }, {
   timestamps: true

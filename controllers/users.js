@@ -6,7 +6,9 @@ const SECRET = process.env.SECRET;
 module.exports = {
   signup,
   login,
-  getUserById
+  getUserById,
+  delete: deleteUser,
+  update: updateUser
 };
 
 
@@ -23,6 +25,7 @@ async function signup(req, res) {
     const token = createJWT(user);    
     res.json({ token });
   } catch (err) {
+    console.log(err);
     // Probably a duplicate email
     res.status(400).json(err);
   }
@@ -58,3 +61,24 @@ async function getUserById(req, res) {
   }
   
   }
+
+
+async function updateUser(req, res) {
+  try {
+  await User.updateOne(  {_id : req.body._id } , req.body )
+  res.status(200).json({message: 'User updated successfully'})
+  } catch (error) {
+    console.log(error)
+    res.status(400).json({message: 'something went wrong'});
+  }
+}
+
+async function deleteUser(req, res) {
+  try {
+    await User.deleteOne({_id : req.body._id});
+  res.status(200).json({message: 'User deleted successfully'})
+  } catch (error) {
+    console.log(error)
+    res.status(400).json({message: 'something went wrong'})
+  }
+}
